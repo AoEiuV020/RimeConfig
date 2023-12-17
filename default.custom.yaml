@@ -30,7 +30,7 @@ patch: # patch后面的才能覆盖默认default.yaml中的设置，
       - traditionalization
       - emoji
       - full_shape
-    fold_options: true            # 呼出时是否折叠，多方案时建议折叠 true ，一个方案建议展开 false
+    fold_options: false            # 呼出时是否折叠，多方案时建议折叠 true ，一个方案建议展开 false
     abbreviate_options: true      # 折叠时是否缩写选项
     option_list_separator: ' / '  # 折叠时的选项分隔符
   
