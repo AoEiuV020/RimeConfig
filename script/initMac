@@ -1,0 +1,12 @@
+#!/bin/sh
+repo=$(cd $(dirname $0);cd ..;pwd)
+home=~/Library/Rime
+rm -rf $home
+mkdir $repo/Rime
+ln -s $repo/Rime $home
+cd $repo
+curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bash -s -- :preset
+cd $repo/plum
+bash rime-install iDvel/rime-ice:others/recipes/full
+rm $home/default.custom.yaml
+ln -s $repo/default.custom.yaml $home/
