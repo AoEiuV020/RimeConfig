@@ -1,0 +1,73 @@
+patch:
+  preset_color_schemes:
+    purity_of_form_custom:
+      name: "仿純粹"
+      author: 020
+      back_color: 0x545554
+      text_color: 0x808080
+      hilited_text_color: 0xEEEEEE
+      hilited_back_color: 0x444444
+      hilited_candidate_text_color: 0x000000
+      hilited_candidate_back_color: 0xfafafa
+      label_color: 0xBBBBBB
+      comment_text_color: 0x808080
+      hilited_comment_text_color: 0x808080
+      candidate_text_color: 0xEEEEEE
+      hilited_candidate_label_color: 0x4C4C4C
+
+  style:
+    # 字体设定
+    # 字体1[:起始码位:结束码位:字重:字形][,字体2 ...]，详情请参考   <https://github.com/rime/weasel/wiki/字體設定>
+    # 字体会依次 fallback
+    font_face: "Microsoft YaHei" # 全局字体。为了让部分复合型 emoji 正常显  示，可以将 emoji 字体放在首位，并指定起始码位防止影响其他字符。refer   <https://github.com/rime/weasel/issues/932> 例如：
+    # "Segoe UI Emoji:20:39:bold:italic, Noto Color Emoji SVG:80,   Arial:600:6ff, Segoe UI Emoji:80, LXGW Wenkai Narrow"
+    label_font_face: "Microsoft YaHei" # 标签字体
+    comment_font_face: "Microsoft YaHei" # 注释字体
+    font_point: 14 # 全局字体大小
+    label_font_point: 14 # 标签字体大小，不设定 fallback 到 font_point
+    comment_font_point: 14 # 注释字体大小，不设定 fallback 到 font_point
+  
+    inline_preedit: true # 行内显示预编辑区：true；false
+    preedit_type: composition # 预编辑区内容：composition（编码）； preview  （高亮候选）；preview_all（全部候选）
+  
+    # 布局设定，同样可以在 layout 的 type 下指定
+    fullscreen: false # 全屏排列：true；false
+    horizontal: false # 横向排列：true；false
+    vertical_text: false # 竖排文本：true；false
+    vertical_text_left_to_right: false # 从左到右竖排：true；false
+    vertical_text_with_wrap: false # 竖排下，自动换行：true；false
+    vertical_auto_reverse: false # 竖排下，输入窗口在上方时倒序排列：true；  false
+  
+    label_format: "%s." # 标签字符：%s. 效果为 1. 2. 3. ....
+    mark_text: "" # 高亮字符，显示在选中的候选标签前
+    ascii_tip_follow_cursor: false # 切换 ASCII 模式时，提示图标跟随鼠标  （而非输入光标）
+    enhanced_position: false # 无法定位候选框时，在窗口窗口左上角显示候选框：  true；false
+    display_tray_icon: false # 托盘显示独立于语言栏的额外图标：true；false
+    antialias_mode: default # 次像素反锯齿设定：default；force_dword；  cleartype；grayscale；aliased
+    text_orientation: horizontal # 文本排布，效果和 `vertical_text` 相同：  horizontal；vertical
+    candidate_abbreviate_length:  # 候选项最大的字数，超过此数字则用省略号代  替
+  
+    mouse_hover_ms: 0 # 鼠标悬停响应间隔，设置为 0 时禁用该功能。默认禁用
+    paging_on_scroll: false # 在候选窗口上滚轮操作时，对应的响应动作。如设定  为 true，则进行翻页操作；如设定为 false（默认)，则进行候选 index 切换（类似  上下方向键）
+    click_to_capture: false # 鼠标点击候选项，创建截图：true；false
+  
+    color_scheme: purity_of_form_custom # 配色方案
+
+    layout:
+      align_type: center # 对齐：top ; center ; bottom
+      max_height: 0 # 候选框最大高度
+      max_width: 0 # 候选框最大宽度，超过会折叠
+      min_height: 0 # 最小高度
+      min_width: 0
+      border_width: 1 # 边框宽度，又名 border
+      margin_x: 5 # 元素偏离候选边框 X 轴距离；为负值时，不显示候选框
+      margin_y: 5 # 元素偏离候选边框 Y 轴距离；为负值时，不显示候选框
+      spacing: 5 # 默认间隙
+      candidate_spacing: 5 # 候选项之间的间隔
+      hilite_spacing: 4 # 候选和标签的间隔
+      hilite_padding: 5 # 高亮区域和边框的间隔。当值 ≥ margin 的值时，高亮颜  色会覆盖整个选中的候选区域，实现「天圆地方」的效果。参考文件末的配置
+      shadow_offset_x: 4 # 阴影偏离和圆角大小
+      shadow_offset_y: 4
+      shadow_radius: 0
+      corner_radius: 10 # 候选框圆角
+      round_corner: 10  # 高亮区域圆角；又名 hilited_corner_radius

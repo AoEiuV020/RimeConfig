@@ -31,9 +31,11 @@ mklink /j "%home%" "%repo%\Rime"
 
 REM 删除 %home%\default.custom.yaml
 del "%home%\default.custom.yaml"
+del "%home%\weasel.custom.yaml"
 
 REM 创建符号链接，将 %repo%\default.custom.yaml 链接到 %home%
 mklink /h "%home%\default.custom.yaml" "%repo%\default.custom.yaml"
 :: copy "%repo%\default.custom.yaml" "%home%\default.custom.yaml"
+mklink /h "%home%\weasel.custom.yaml" "%repo%\weasel.custom.yaml"
 
 echo 脚本执行完成
