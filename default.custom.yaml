@@ -110,28 +110,27 @@ patch: # patch后面的才能覆盖默认default.yaml中的设置，
       # - { when: always, accept: Control+Shift+5, toggle: full_shape }          # 切换全半角
   
       # emacs_editing:
-      # - { when: composing, accept: Control+p, send: Up }
-      # - { when: composing, accept: Control+n, send: Down }
-      # - { when: composing, accept: Control+b, send: Left }
-      # - { when: composing, accept: Control+f, send: Right }
+      - { when: composing, accept: Control+p, send: Up }
+      - { when: composing, accept: Control+n, send: Down }
+      - { when: composing, accept: Control+b, send: Left }
+      - { when: composing, accept: Control+f, send: Right }
       # - { when: composing, accept: Control+a, send: Home }
       # - { when: composing, accept: Control+e, send: End }
-      # - { when: composing, accept: Control+d, send: Delete }
+      - { when: composing, accept: Control+d, send: Delete }
       # - { when: composing, accept: Control+k, send: Shift+Delete }
-      # - { when: composing, accept: Control+h, send: BackSpace }
-      # - { when: composing, accept: Control+g, send: Escape }
-      # - { when: composing, accept: Control+bracketleft, send: Escape }
+      - { when: composing, accept: Control+h, send: BackSpace }
+      - { when: composing, accept: Control+g, send: Escape }
+      - { when: composing, accept: Control+bracketleft, send: Escape }
       # - { when: composing, accept: Control+y, send: Page_Up }
       # - { when: composing, accept: Alt+v, send: Page_Up }
       # - { when: composing, accept: Control+v, send: Page_Down }
   
       # optimized_mode_switch:
       # - { when: always, accept: Control+Shift+space, select: .next }
-      # - { when: always, accept: Shift+space, toggle: ascii_mode }
+      - { when: always, accept: Shift+space, toggle: ascii_mode }
       # - { when: always, accept: Control+comma, toggle: full_shape }
       # - { when: always, accept: Control+period, toggle: ascii_punct }
       # - { when: always, accept: Control+slash, toggle: traditionalization }
-      - { when: always, accept: Shift+space, toggle: ascii_mode }
   
       # 将小键盘 0~9 . 映射到主键盘，数字金额大写的 Lua 如 R1234.5678 可使用小键盘输入
       - {accept: KP_0, send: 0, when: composing}
